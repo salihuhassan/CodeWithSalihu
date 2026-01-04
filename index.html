@@ -218,9 +218,8 @@
           </template>
         </div>
 
-       
-<br>
-        <div class="flex justify-center">
+  <br>
+<div class="flex justify-center">
   <div class="w-full max-w-3xl px-4">
 
     <!-- Slider Track -->
@@ -240,11 +239,12 @@
       </div>
     </div>
 
-    <!-- Labels -->
-    <div class="flex justify-between mt-4 text-sm uppercase tracking-widest text-[#E5E7EB]/60">
-      <span>Beginner</span>
-      <span>Intermediate</span>
-      <span>Expert</span>
+    <!-- Percentage Labels -->
+    <div class="flex justify-between mt-4 text-sm font-mono tracking-widest text-[#E5E7EB]/60">
+      <span></span>
+      <span></span>
+             <span x-text="currentSkill.percent + '%'"></span>
+
     </div>
 
     <!-- Skill Name -->
@@ -253,8 +253,10 @@
           x-text="currentSkill.title">
       </h3>
 
-      <p class="mt-4 text-lg text-[#E5E7EB]/80 max-w-xl mx-auto">
-        Production-level experience building real-world systems with this technology.
+      <!-- Real, Confident Description -->
+      <p class="mt-4 text-lg text-[#E5E7EB]/80 max-w-xl mx-auto leading-relaxed">
+        Actively used in real client projects to design, build, and deploy secure,
+        high-performance applications with clean architecture and long-term scalability.
       </p>
     </div>
 
@@ -704,6 +706,7 @@ function testimonials() {
   </script>
 </body>
 </html>
+
 
 
 
