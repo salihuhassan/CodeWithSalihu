@@ -218,26 +218,49 @@
           </template>
         </div>
 
-        <div class="flex justify-center items-center">
-          <div class="relative w-80 h-80">
-            <svg class="w-full h-full transform -rotate-90">
-              <circle cx="160" cy="160" r="140" stroke="#1e293b" stroke-width="20" fill="none" />
-              <circle 
-                cx="160" 
-                cy="160" 
-                r="140" 
-                stroke="#06B6D4" 
-                stroke-width="30" 
-                fill="none"
-                stroke-linecap="round"
-                :stroke-dasharray="circumference"
-                :stroke-dashoffset="circumference - (currentSkill.percent / 100) * circumference"
-                class="transition-all duration-1000 ease-out" />
-            </svg>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-4xl md:text-4xl font-black text-[#E5E7EB]" x-text="currentSkill.percent + '%'"></span>
-            </div>
-          </div>
+       
+<br>
+        <div class="flex justify-center">
+  <div class="w-full max-w-3xl px-4">
+
+    <!-- Slider Track -->
+    <div class="relative h-6 rounded-full bg-[#0f172a] shadow-inner overflow-hidden">
+
+      <!-- Inner Glow Track -->
+      <div class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500/20 to-cyan-400/10"></div>
+
+      <!-- Moving Knob -->
+      <div
+        class="absolute -top-3 w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-cyan-600
+               shadow-2xl transition-all duration-700 ease-out"
+        :style="`left: calc(${currentSkill.percent}% - 1.5rem)`"
+      >
+        <!-- Inner Shine -->
+        <div class="absolute inset-2 rounded-full bg-white/30 blur-sm"></div>
+      </div>
+    </div>
+
+    <!-- Labels -->
+    <div class="flex justify-between mt-4 text-sm uppercase tracking-widest text-[#E5E7EB]/60">
+      <span>Beginner</span>
+      <span>Intermediate</span>
+      <span>Expert</span>
+    </div>
+
+    <!-- Skill Name -->
+    <div class="text-center mt-10">
+      <h3 class="text-3xl md:text-4xl font-black gradient-text"
+          x-text="currentSkill.title">
+      </h3>
+
+      <p class="mt-4 text-lg text-[#E5E7EB]/80 max-w-xl mx-auto">
+        Production-level experience building real-world systems with this technology.
+      </p>
+    </div>
+
+  </div>
+</div>
+
         </div>
       </div>
     </div>
@@ -681,6 +704,7 @@ function testimonials() {
   </script>
 </body>
 </html>
+
 
 
 
