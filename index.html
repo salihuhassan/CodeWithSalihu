@@ -212,7 +212,7 @@
             <button 
               x-text="skill.title"
               class="px-4 py-4 text-lg font-medium rounded-xl transition-all duration-300 h-16"
-              :class="currentSkill.title === skill.title ? 'bg-[#06B6D4] text-white shadow-xl ring-4 ring-[#06B6D4]/50' : 'bg-white/10 text-[#E5E7EB] hover:bg-white/20'"
+              :class="currentSkill.title === skill.title ? 'bg-[#06B6D4] text-white shadow-xl ring-4 ring-[#06B6D4]/50' : 'bg-white/10 text-[#E5E7EB] hover:bg-white/20' text-[color:var(--text-muted)]"
               @click="currentSkill = skill">
             </button>
           </template>
@@ -254,7 +254,7 @@
       </h3>
 
       <!-- Real, Confident Description -->
-      <p class="mt-4 text-lg text-[#E5E7EB]/80 max-w-xl mx-auto leading-relaxed">
+      <p class="mt-4 text-lg text-[#E5E7EB]/80 max-w-xl mx-auto leading-relaxed text-[color:var(--text-muted)]">
         Actively used in real client projects to design, build, and deploy secure,
         high-performance applications with clean architecture and long-term scalability.
       </p>
@@ -279,7 +279,7 @@
       <h2 class="text-3xl md:text-4xl font-black gradient-text mb-4">
         Experience Snapshot
       </h2>
-      <p class="text-lg text-[#E5E7EB]/70 max-w-2xl mx-auto">
+      <p class="text-lg text-[#E5E7EB]/70 max-w-2xl mx-auto text-[color:var(--text-muted)]">
         A concise overview of how I deliver value, consistency, and reliability
         across real-world projects.
       </p>
@@ -305,7 +305,7 @@
       </span>
     </div>
     <div class="text-4xl font-black gradient-text mb-2">5+</div>
-    <p class="text-[#E5E7EB]/70 leading-relaxed">
+    <p class="text-[#E5E7EB]/70 leading-relaxed text-[color:var(--text-muted)]">
       Production-grade systems delivered for businesses in hospitality,
       e-commerce, and SaaS.
     </p>
@@ -323,7 +323,7 @@
       </span>
     </div>
     <div class="text-4xl font-black text-emerald-400 mb-2">50+</div>
-    <p class="text-[#E5E7EB]/70 leading-relaxed">
+    <p class="text-[#E5E7EB]/70 leading-relaxed text-[color:var(--text-muted)]">
       Long-term partnerships built on trust, clear communication,
       and consistent delivery.
     </p>
@@ -341,7 +341,7 @@
       </span>
     </div>
     <div class="text-4xl font-black text-yellow-400 mb-2">99%</div>
-    <p class="text-[#E5E7EB]/70 leading-relaxed">
+    <p class="text-[#E5E7EB]/70 leading-relaxed text-[color:var(--text-muted)]">
       On-time delivery rate with stable, secure, and well-tested
       production deployments.
     </p>
@@ -359,7 +359,7 @@
       </span>
     </div>
     <div class="text-4xl font-black text-purple-400 mb-2">24h</div>
-    <p class="text-[#E5E7EB]/70 leading-relaxed">
+    <p class="text-[#E5E7EB]/70 leading-relaxed text-[color:var(--text-muted)]">
       Fast response time for support, updates, and critical
       production issues.
     </p>
@@ -384,7 +384,7 @@
       <template x-for="t in testimonialsList" :key="t.name">
         <div class="glass p-8 rounded-3xl shadow-2xl flex flex-col items-center hover:scale-105 transition duration-500">
           <img :src="t.image" :alt="t.name" class="w-20 h-20 rounded-full mb-4 object-cover border-2 border-[#06B6D4]">
-          <p class="text-[#E5E7EB]/80 italic mb-4" x-text="t.feedback"></p>
+          <p class="text-[#E5E7EB]/80 italic mb-4" x-text="t.feedback text-[color:var(--text-muted)]"></p>
           <h4 class="text-lg font-bold text-[#06B6D4]" x-text="t.name"></h4>
           <span class="text-sm text-[#E5E7EB]/50" x-text="t.company"></span>
         </div>
@@ -399,7 +399,7 @@
           <div class="flex-shrink-0 w-full px-4">
             <div class="glass p-8 rounded-3xl shadow-2xl flex flex-col items-center">
               <img :src="t.image" :alt="t.name" class="w-20 h-20 rounded-full mb-4 object-cover border-2 border-[#06B6D4]">
-              <p class="text-[#E5E7EB]/80 italic mb-4" x-text="t.feedback"></p>
+              <p class="text-[#E5E7EB]/80 italic mb-4" x-text="t.feedback text-[color:var(--text-muted)]"></p>
               <h4 class="text-lg font-bold text-[#06B6D4]" x-text="t.name"></h4>
               <span class="text-sm text-[#E5E7EB]/50" x-text="t.company"></span>
             </div>
@@ -470,7 +470,7 @@ function testimonials() {
       <h2 class="text-2xl md:text-3xl lg:text-2xl font-black gradient-text mb-8">
         Ready to build something <span class="whitespace-nowrap">world-class?</span>
       </h2>
-      <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto">
+      <p class="text-xl md:text-2xl mb-12 max-w-2xl mx-auto text-[color:var(--text-muted)]">
         From luxury hotel booking systems to scalable SaaS, let's create your next big thing.
       </p>
       <a href="mailto:salihubarup@gmail.com" class="glass px-4 py-4 rounded-xl font-mono text-lg uppercase tracking-wider border-2 border-[#06B6D4]/50 hover:border-[#06B6D4] hover:bg-[#06B6D4]/10 transition-all duration-500 inline-flex items-center gap-4 shadow-xl">
@@ -487,7 +487,7 @@ function testimonials() {
     <!-- Brand -->
     <div>
       <h3 class="text-2xl font-black gradient-text mb-4">CodeWithSalihu</h3>
-      <p class="text-[#E5E7EB]/70">
+      <p class="text-[#E5E7EB]/70 text-[color:var(--text-muted)]">
         Fullstack Dev crafting luxury digital experiences. Nigeria → World.
       </p>
     </div>
@@ -554,7 +554,7 @@ function testimonials() {
   </div>
 
   <!-- Bottom -->
-  <div class="border-t border-[#E5E7EB]/20 mt-12 pt-8 text-center text-sm text-[#E5E7EB]/50">
+  <div class="border-t border-[#E5E7EB]/20 mt-12 pt-8 text-center text-sm text-[#E5E7EB]/50 text-[color:var(--text-muted)]">
     <p>© 2025 CodeWithSalihu. Built with ❤️ in Calabar. All rights reserved.</p>
   </div>
 </footer>
@@ -773,6 +773,7 @@ function testimonials() {
   </script>
 </body>
 </html>
+
 
 
 
